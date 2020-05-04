@@ -1,0 +1,24 @@
+#1: Setting up the MySQL Table:
+
+CREATE TABLE login_admin
+(
+id INT NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(100),
+user_pass VARCHAR(200),
+PRIMARY KEY (id)
+)
+
+#Now insert the two user information inside the table with the following command:
+
+
+INSERT INTO login_admin (user_name, user_pass)
+VALUES
+(
+‘swashata’, SHA(‘swashata’)
+)
+ 
+INSERT INTO login_admin (user_name, user_pass)
+VALUES
+(
+‘admin’, SHA(‘admin’)
+)
